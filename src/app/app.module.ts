@@ -1,16 +1,75 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { Routes,RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
+import { LoginComponent } from './login/login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { ProductComponent } from './product/product.component';
+import { LaptopComponent } from './product/laptop/laptop.component';
+import { MobileComponent } from './product/mobile/mobile.component';
+import { TvComponent } from './product/tv/tv.component';
+import { WmComponent } from './product/wm/wm.component';
+import { AcComponent } from './product/ac/ac.component';
+import { CoolerComponent } from './product/cooler/cooler.component';
+import { FanComponent } from './product/fan/fan.component';
+import { CardComponent } from './card/card.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { DesignutilityService } from './appServices/designutility.service';
+
+const appRoutes:Routes=[
+
+  {path:'',redirectTo:'login', pathMatch:'full'},
+  {path:'home', component: HomeComponent},
+  {path:'about', component: AboutComponent},
+  {path:'product', component: ProductComponent, children:[
+
+    {path:'laptop', component: LaptopComponent},
+    {path:'mobile', component: MobileComponent},
+    {path:'tv', component: TvComponent},
+    {path:'ac', component: AcComponent},
+    {path:'fan', component: FanComponent},
+    {path:'cooler', component: CoolerComponent},
+    {path:'washingmachine', component: WmComponent}
+  ]},
+  {path:'contact', component: ContactComponent},
+  {path:'cart', component: ParentComponent},
+  {path:'login', component: LoginComponent},
+  {path: '**', component: NotfoundComponent} //wild card route
+]
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    ContactComponent,
+    AboutComponent,
+    LoginComponent,
+    NotfoundComponent,
+    ProductComponent,
+    LaptopComponent,
+    MobileComponent,
+    TvComponent,
+    WmComponent,
+    AcComponent,
+    CoolerComponent,
+    FanComponent,
+    CardComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [DesignutilityService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

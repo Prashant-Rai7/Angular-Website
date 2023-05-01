@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="row">
+    <!-- <div class="col-md-6 d-flex justify-content-center align-items-center"> -->
+    <div class="col-md-12" id="productContact">
+      <!-- <img src="../../assets/contact.avif" alt="contact" class="w-25 rounded" /> -->
+      <div class="row">
+        <div class="col-md-3">
+          <app-card>
+            <h5 class="card-title">{{product}}</h5>
+            <button class="btn btn-success" (click)="messageALert()">{{btnName}}</button>
+          </app-card>
+        </div>
+        <div class="col-md-3">
+          <app-card>
+            <h5 class="card-title">{{product}}</h5>
+            <button class="btn btn-success" (click)="messageALert()">{{btnName}}</button>
+          </app-card>
+        </div>
+        <div class="col-md-3">
+          <app-card>
+            <h5 class="card-title">{{product}}</h5>
+            <button class="btn btn-success" (click)="messageALert()">{{btnName}}</button>
+          </app-card>
+        </div>
+        <div class="col-md-3">
+          <app-card>
+            <h5 class="card-title">{{product}}</h5>
+            <button class="btn btn-success" (click)="messageALert()">{{btnName}}</button>
+          </app-card>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5 mx-auto mb-5">
+      <div class="contact-us">
+        <h2>Contact Us</h2>
+        <form action="#">
+          <label for="customerName">NAME <em>&#x2a;</em></label>
+          <input
+            id="customerName"
+            name="customerName"
+            required=""
+            type="text"
+          /><label for="customerEmail">EMAIL <em>&#x2a;</em></label
+          ><input
+            id="customerEmail"
+            name="customerEmail"
+            required=""
+            type="email"
+          /><label for="customerPhone">PHONE</label
+          ><input
+            id="customerPhone"
+            name="customerPhone"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            type="tel"
+          /><label for="orderNumber">ORDER NUMBER</label
+          ><input id="orderNumber" name="orderNumber" type="text" /><label
+            for="customerNote"
+            >YOUR MESSAGE <em>&#x2a;</em></label
+          ><textarea
+            id="customerNote"
+            name="customerNote"
+            required=""
+            rows="4"
+          ></textarea>
+          <div><button class="btn btn-primary mt-4 w-100" >SUBMIT</button></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

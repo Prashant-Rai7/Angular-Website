@@ -1,0 +1,67 @@
+<div class="container" id="carddiv">
+<div class="row">
+  <div class="col-md-8 bg-dark rounded">
+    <div class="row">
+      <div class="card" style="width: 18rem; margin: 40px;">
+        <img class="card-img-top" src="../../assets/Images/laptop.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Laptop</h5>
+          <p class="card-text">Some quick example text to bp the bulk of the card's content.</p>
+          <a routerLink="laptop" class="btn btn-success" (click)="knowMore()">Know More</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem; margin: 40px;">
+        <img class="card-img-top" src="../../assets/Images/mobile.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Mobile</h5>
+          <p class="card-text">Some quick examplehe bulk of the card's content.</p>
+          <a routerLink="mobile"  class="btn btn-success" (click)="knowMore()">Know More</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem; margin: 40px;">
+        <img class="card-img-top" src="../../assets/Images/ac.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">AC</h5>
+          <p class="card-text">Some quick example text to build one card's content.</p>
+          <a routerLink="ac"  class="btn btn-success" (click)="knowMore()">Know More</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem; margin: 40px;">
+        <img class="card-img-top" src="../../assets/Images/washing machine.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Washing Machine</h5>
+          <p class="card-text">Some quick example text to bcard's content.</p>
+          <a routerLink="washingmachine"  class="btn btn-success" (click)="knowMore()">Know More</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem; margin: 40px;">
+        <img class="card-img-top" src="../../assets/Images/fan.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Fan</h5>
+          <p class="card-text">Some quick example text to build  the card's content.</p>
+          <a routerLink="fan"  class="btn btn-success" (click)="knowMore()">Know More</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem; margin: 40px;">
+        <img class="card-img-top" src="../../assets/Images/tv.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">TV</h5>
+          <p class="card-text">Some quick example text to build on the cs content.</p>
+          <a routerLink="tv"  class="btn btn-success" (click)="knowMore()">Know More</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem; margin: 40px;">
+        <img class="card-img-top" src="../../assets/Images/cooler.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Cooler</h5>
+          <p class="card-text">Some quick example text to buildd's content.</p>
+          <a routerLink="cooler"  class="btn btn-success" (click)="knowMore()">Know More</a>
+        </div>
+      </div>
+    </div>
+    </div>
+  <div class="col-md-4 border-left">
+    <router-outlet><h2 class="text-light mt-4" *ngIf="!productSelected">Select Product</h2></router-outlet>
+  </div>
+</div>
+</div>

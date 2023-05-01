@@ -1,0 +1,44 @@
+#imageContact{
+  margin-top: 40px;
+}
+#imageContact img{
+  margin-top: 20px;
+}
+.contact-us {
+  background: #f3f3f3;
+  padding: 20px 20px;
+  border-radius: 5px;
+  margin-top: 40px;
+}
+
+label, input, textarea {
+  display: block;
+  width: 100%;
+  font-size: 12pt;
+  line-height: 24pt;
+  text-align: left;
+}
+
+
+h3 {
+  font-weight: normal;
+  font-size: 10pt;
+  line-height: 24pt;
+  font-style: italic;
+  margin: 0 0 0.5em 0;
+}
+em {
+  color: #f44f02;
+  font-weight: bold;
+}
+input, textarea {
+  border-radius: 5px;
+  background: #f8f4e5;
+  border: 1px solid rgba(0, 0, 0, 0.61);
+  outline: none;
+}
+
+input:focus, textarea:focus {
+  border: 1px solid #6bd4b1;
+}
+
