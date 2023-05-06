@@ -1,22 +1,24 @@
 
-
 <h1>{{title}}</h1>
   <div class="parentFormContainer">
     <div id="formContainer">
       <h2 class="mb-3">User Log in</h2>
       <form class="container" id="createForm" NgForm="addForm">
         <div class="mb-3">
-          <label  class="form-label">Email</label>
+          <label  class="form-label d-flex justify-content-start">Email</label>
           <input type="email" class="form-control" id="title" (keyup)="onEmailPress($event)" required>
         </div>
         <div class="mb-3">
-          <label class="form-label">Password</label>
+          <label class="form-label d-flex justify-content-start">Password</label>
           <input type="password" class="form-control" id="desc" (keyup)="onPassPress($event)" required>
-
         </div>
-        <div class="text-center">
-          <button type="submit" class="btn btn-success" id="submitBtn" (click)="resetForm()">Submit</button>
-
+        <div>
+          <button type="submit" class="btn btn-success w-100 p-1" id="submitBtn" (click)="resetForm()">Submit</button>
+        </div>
+        <div>
+          <a routerLinkActive="active" routerLink="/forgot">Forgot Password</a>
+          OR
+          <a routerLinkActive="active" routerLink="/signup">Sign Up</a>
         </div>
       </form>
     </div>

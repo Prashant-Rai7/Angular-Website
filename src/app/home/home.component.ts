@@ -15,5 +15,6 @@ export class HomeComponent {
   products:any;
   ngOnInit(){
     this.products = this._msgService.product;
+    // this._msgService.product().subscribe(productData => this.products = productData)
   }
 }

@@ -1,0 +1,11 @@
+<div class="container bg-light rounded w-75">
+  <div>
+    <label for="username">Username:&nbsp;</label><span>{{userName}}</span>
+  </div>
+  <div>
+    <input type="text" class="rounded" #uname>
+    <button class="btn btn-primary m-4" (click)="updateUsername(uname)">Update</button>
+  </div>
+</div>
+
+

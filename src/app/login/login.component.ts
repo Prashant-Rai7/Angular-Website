@@ -28,7 +28,7 @@ export class LoginComponent {
 
   resetForm(){
 
-    if(this.emailValues === "prashant@gmail.com" && this.passValues === "admin"){
+    if(this.emailValues === "prashantrai@gmail.com" && this.passValues === "admin_12345678"){
       console.log("Logged in")
       this.addForm.reset({
       });

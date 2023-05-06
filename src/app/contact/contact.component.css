@@ -42,3 +42,9 @@ input:focus, textarea:focus {
   border: 1px solid #6bd4b1;
 }
 
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+  border: 1px solid rgb(184, 0, 0);
+  box-shadow: 0 0 0 2px inset rgba(255, 0, 0, 0.103);
+}
+

@@ -1,0 +1,136 @@
+<section class="gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-12 col-lg-9 col-xl-7">
+        <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+          <div class="card-body p-4 p-md-5">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>
+
+            <form (ngSubmit)="signupSubmit(signupForm)" #signupForm="ngForm">
+              <div ngModelGroup="userDetail" #userDetail="ngModelGroup">
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="firstName" class="form-control form-control-lg" placeholder="First Name" name="fname" required ngModel #fname="ngModel"/>
+                      <small class="text-danger" *ngIf="!fname.valid && fname.touched">Please Enter Valid First Name</small>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="lastName" class="form-control form-control-lg" placeholder="Last Name" name="lname" required ngModel #lname="ngModel"/>
+                      <small class="text-danger" *ngIf="!lname.valid && lname.touched">Please Enter Valid Last Name</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-4 d-flex align-items-center">
+                    <div class="form-outline datepicker w-100">
+                      <input type="date" class="form-control form-control-lg" id="birthdayDate" name="dob" required ngModel/>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <h6 class="mb-2 pb-1">Gender: </h6>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="gender" id="femaleGender"
+                        value="female"  required ngModel/>
+                      <label class="form-check-label" for="femaleGender">Female</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="gender" id="maleGender"
+                        value="male"  required ngModel />
+                      <label class="form-check-label" for="maleGender">Male</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="gender" id="otherGender"
+                        value="other" required ngModel/>
+                      <label class="form-check-label" for="otherGender">Other</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-4 pb-2">
+                    <div class="form-outline">
+                      <input type="email" id="emailAddress" for="email" class="form-control form-control-lg" placeholder="yourname@gmail.com" name="email" email required ngModel #email="ngModel"/>
+                      <small class="text-danger" *ngIf="!email.valid && email.touched">Please Enter Valid Email Address</small>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4 pb-2">
+                    <div class="form-outline">
+                      <input type="tel" id="phoneNumber" class="form-control form-control-lg" placeholder="+91 9807489xxx" name="phone" required ngModel #phone="ngModel"/>
+                      <small class="text-danger" *ngIf="!phone.valid && phone.touched">Please Enter Valid Phone Number</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12 d-flex">
+                    <div class="col-md-6 mb-4 pb-2">
+                        <select class="select form-control form-control-lg w-100" value="course" id="course" [ngModel]="defaultCourse">
+                          <option name="course" value="select" required ngModel>Select Course</option>
+                          <option  name="course" name="Angular">Angular</option>
+                          <option name="course" name="React.js">React.js</option>
+                          <option  name="course" name="Node.js">Node.js</option>
+                          <option  name="course" name="MongoDB">MongoDB</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6 mb-4 pb-2">
+                        <input type="file" class="form-control form-control-lg" name="resume" id="resume">
+                      </div>
+                  </div>
+                </div>
+                <div class="mt-4 pt-2">
+                  <button class="btn btn-primary btn-lg w-100" type="submit" value="Submit" (click)="signupSubmit(signupForm)">Submit</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="row m-5 justify-content-center" *ngIf="submitted">
+  <div class="col-md-6 bg-white rounded shadow py-3" >
+    <h2>Form Data</h2>
+    <div class="data" style="text-align: left;">
+      <p>First Name:&nbsp;&nbsp;<strong>{{formData.fname}}</strong></p>
+      <p>Last Name:&nbsp;&nbsp;<strong>{{formData.lname}}</strong></p>
+      <p>DOB:&nbsp;&nbsp;<strong>{{formData.dob}}</strong></p>
+      <p>Gender:&nbsp;&nbsp;<strong>{{formData.gender}}</strong></p>
+      <p>Email:&nbsp;&nbsp;<strong>{{formData.email}}</strong></p>
+      <p>Phone:&nbsp;&nbsp;<strong>{{formData.phone}}</strong></p>
+      <p>Course:&nbsp;&nbsp;<strong>{{formData.course}}</strong></p>
+    </div>
+
+  </div>
+</div>
+
+<!-- <div class="container  bg-light rounded w-25">
+  <div class="row p-3" style="text-align: left;">
+    <form>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="Username" class="form-control" placeholder="Enter Username">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" placeholder="Enter email">
+      </div>
+      <div class="form-group">
+        <label for="email">Select Course : &nbsp;</label>
+        <select name="course" id="course">
+          <option value="angular">Angular</option>
+          <option value="react.js">React.js</option>
+          <option value="node.js">Node.js</option>
+          <option value="mongo">MongoDB</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <input type="radio" class="form-control" value="male">
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Submit</button>
+    </form>
+  </div>
+</div> -->

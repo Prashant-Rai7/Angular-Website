@@ -9,10 +9,15 @@ body{
 }
 nav{
   background-color: #0a0543;
-  padding: 20px;
   font-size: 20px;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+img{
+  height: 80px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
 a{
   color: white;
   margin-left: 20px;
@@ -23,6 +28,10 @@ a{
 a:hover{
   background-color: #fff;
 }
+a:active{
+  color: rgb(0, 217, 255);
+  background-color: #000000;
+}
 
 h2{
   color: rgb(83, 248, 253);
@@ -31,4 +40,7 @@ h2{
 }
 ul{
   display: flex;
+}
+#footer{
+  background-color: #0a0543cb;
 }

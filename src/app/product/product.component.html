@@ -1,8 +1,8 @@
-<div class="container" id="carddiv">
+<div class="container mb-5" id="carddiv">
 <div class="row">
-  <div class="col-md-8 bg-dark rounded">
+  <div class="col-md-7 bg-light rounded">
     <div class="row">
-      <div class="card" style="width: 18rem; margin: 40px;">
+      <div class="card">
         <img class="card-img-top" src="../../assets/Images/laptop.jpg" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Laptop</h5>
@@ -10,7 +10,7 @@
           <a routerLink="laptop" class="btn btn-success" (click)="knowMore()">Know More</a>
         </div>
       </div>
-      <div class="card" style="width: 18rem; margin: 40px;">
+      <div class="card" >
         <img class="card-img-top" src="../../assets/Images/mobile.jpg" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Mobile</h5>
@@ -18,7 +18,7 @@
           <a routerLink="mobile"  class="btn btn-success" (click)="knowMore()">Know More</a>
         </div>
       </div>
-      <div class="card" style="width: 18rem; margin: 40px;">
+      <div class="card" >
         <img class="card-img-top" src="../../assets/Images/ac.jpg" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">AC</h5>
@@ -26,7 +26,7 @@
           <a routerLink="ac"  class="btn btn-success" (click)="knowMore()">Know More</a>
         </div>
       </div>
-      <div class="card" style="width: 18rem; margin: 40px;">
+      <div class="card">
         <img class="card-img-top" src="../../assets/Images/washing machine.jpg" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Washing Machine</h5>
@@ -34,7 +34,7 @@
           <a routerLink="washingmachine"  class="btn btn-success" (click)="knowMore()">Know More</a>
         </div>
       </div>
-      <div class="card" style="width: 18rem; margin: 40px;">
+      <div class="card" >
         <img class="card-img-top" src="../../assets/Images/fan.jpg" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Fan</h5>
@@ -42,7 +42,7 @@
           <a routerLink="fan"  class="btn btn-success" (click)="knowMore()">Know More</a>
         </div>
       </div>
-      <div class="card" style="width: 18rem; margin: 40px;">
+      <div class="card" >
         <img class="card-img-top" src="../../assets/Images/tv.jpg" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">TV</h5>
@@ -50,7 +50,7 @@
           <a routerLink="tv"  class="btn btn-success" (click)="knowMore()">Know More</a>
         </div>
       </div>
-      <div class="card" style="width: 18rem; margin: 40px;">
+      <div class="card" >
         <img class="card-img-top" src="../../assets/Images/cooler.jpg" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Cooler</h5>
@@ -60,8 +60,12 @@
       </div>
     </div>
     </div>
-  <div class="col-md-4 border-left">
+  <div class="col-md-4 bg-dark mx-auto rounded">
     <router-outlet><h2 class="text-light mt-4" *ngIf="!productSelected">Select Product</h2></router-outlet>
   </div>
 </div>
 </div>
+
+
+
+

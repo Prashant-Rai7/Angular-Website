@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes,RouterModule } from '@angular/router';
+import {HttpClientModule} from '@angular/common/http'
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -21,6 +24,14 @@ import { CardComponent } from './card/card.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { DesignutilityService } from './appServices/designutility.service';
+import { SubjectComponent } from './subject/subject.component';
+import {Comp1Component} from './comp1/comp1.component';
+import { Comp2Component } from './comp2/comp2.component';
+import { Comp3Component } from './comp3/comp3.component';
+import { Comp4Component } from './comp4/comp4.component';
+import { HooksComponent } from './hooks/hooks.component';
+import { SignupComponent } from './signup/signup.component';
+import { ForgotpassComponent } from './forgotpass/forgotpass.component'
 
 const appRoutes:Routes=[
 
@@ -40,7 +51,11 @@ const appRoutes:Routes=[
   {path:'contact', component: ContactComponent},
   {path:'cart', component: ParentComponent},
   {path:'login', component: LoginComponent},
+  {path:'signup', component: SignupComponent},
+  {path:'forgot', component: ForgotpassComponent},
+  {path:'subject', component: SubjectComponent},
   {path: '**', component: NotfoundComponent} //wild card route
+
 ]
 
 
@@ -62,12 +77,23 @@ const appRoutes:Routes=[
     FanComponent,
     CardComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    SubjectComponent,
+    Comp1Component,
+    Comp2Component,
+    Comp3Component,
+    Comp4Component,
+    HooksComponent,
+    SignupComponent,
+    ForgotpassComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [DesignutilityService],
   bootstrap: [AppComponent]

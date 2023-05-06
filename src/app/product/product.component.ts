@@ -10,4 +10,5 @@ export class ProductComponent {
   knowMore(){
     this.productSelected = true
   }
+
 }

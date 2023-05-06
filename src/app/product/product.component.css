@@ -1,13 +1,15 @@
 #carddiv{
-  background-color: #000000;
-  margin-top: 20px;
-  border-radius: 5px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
 }
 .card{
   text-align: left;
   font-size: 15px;
   justify-content: center;
   align-items: center;
+  width: 18rem;
+  margin: 20px;
 }
 img{
   width: 200px;

@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent {
-
+  Location: string = "Canada";
+  generateLocation(location: any){
+    this.Location = location.value
+  }
 }
